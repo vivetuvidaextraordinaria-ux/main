@@ -12,7 +12,7 @@
 <script>(function(w,d,t,h,s,n){w.FlodeskObject=n;var fn=function(){(w[n].q=w[n].q||[]).push(arguments)};w[n]=w[n]||fn;var f=d.getElementsByTagName(t)[0];var v='?v='+Math.floor(new Date().getTime()/(120*1000))*60;var sm=d.createElement(t);sm.async=true;sm.type='module';sm.src=h+s+'.mjs'+v;f.parentNode.insertBefore(sm,f);var sn=d.createElement(t);sn.async=true;sn.noModule=true;sn.src=h+s+'.js'+v;f.parentNode.insertBefore(sn,f)})(window,document,'script','https://assets.flodesk.com','/universal','fd');</script></head>
 <body>
   <div class="marquee"><span>CONFERENCIAS · EXPERIENCIAS QUE ACTIVAN &nbsp; ✦ &nbsp; VOZ, IDENTIDAD Y LIDERAZGO &nbsp; ✦ &nbsp; CONFERENCIAS · EXPERIENCIAS QUE ACTIVAN &nbsp; ✦ &nbsp;</span></div>
-  <header class="nav"><a class="brand" href="/">Ana Paola <em>Miranda</em></a><nav><a href="#conferencias">Conferencias</a><a href="/reborn/">Reborn</a><a href="/vuvepodcast/">Podcast</a><a href="#solicitar">Contacto</a></nav><a class="nav-cta" href="#solicitar">Solicitar conferencia</a></header>
+  <header class="nav"><a class="brand" href="/">Ana Paola <em>Miranda</em></a><nav id="site-navigation"><a href="#conferencias">Conferencias</a><a href="/reborn/">Reborn</a><a href="/vuvepodcast/">Podcast</a><a href="#solicitar">Contacto</a></nav><a class="nav-cta" href="#solicitar">Solicitar conferencia</a><button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-navigation"><span></span><span></span><span></span></button></header>
 
   <main>
     <section class="conference-hero">
@@ -54,6 +54,6 @@
   </main>
   <footer class="footer"><div><div class="eyebrow">Ana Paola Miranda</div><h2>Tu voz también puede abrir un <em>nuevo mundo.</em></h2></div><div class="footer-details"><a href="/reborn/">Conoce Reborn</a><a href="/vuvepodcast/">Escucha el podcast</a><a href="mailto:hola@anapaolamiranda.com">hola@anapaolamiranda.com</a></div></footer>
   <script src="/assets.js"></script><script>document.querySelectorAll('[data-photo]').forEach(i=>i.src=window.APM_ASSETS[i.dataset.photo]);</script>
-</body>
+<script>const nav=document.querySelector('.nav'),toggle=document.querySelector('.nav-toggle');if(toggle){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú')});nav.querySelectorAll('nav a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Abrir menú')}))}</script></body>
 </html>
 
